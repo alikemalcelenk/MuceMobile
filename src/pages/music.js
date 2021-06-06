@@ -10,16 +10,17 @@ import HomeIcon from '../components/icons/Home';
 import SpotifyIcon from '../components/icons/Spotify';
 import YoutubeIcon from '../components/icons/Youtube';
 
+//theme
+import theme from '../utils/theme';
+
 const MusicPage = ({navigation}) => {
   return (
-    <SafeAreaView>
-      <Box flexDirection="row">
-        <Text onPress={() => navigation.navigate('HomePage')}>Music</Text>
-        <HomeIcon color="purple" />
-        <SpotifyIcon color="purple" />
-        <YoutubeIcon color="purple" />
-      </Box>
-    </SafeAreaView>
+    <Box flexDirection="row" as={SafeAreaView}>
+      <Text onPress={() => navigation.navigate('HomePage')}>Music</Text>
+      <HomeIcon color={theme.colors.purple} />
+      <SpotifyIcon color={theme.colors.purple} />
+      <YoutubeIcon color={theme.colors.purple} />
+    </Box>
   );
 };
 
