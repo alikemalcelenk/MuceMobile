@@ -1,27 +1,39 @@
-import React from 'react';
-import {SafeAreaView} from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-//components - styled-system
-import Box from './components/styledSystem/box';
-import Text from './components/styledSystem/text';
+const Stack = createStackNavigator();
 
-//components - icons
-import HomeIcon from './components/icons/Home';
-import CameraIcon from './components/icons/Camera';
-import SpotifyIcon from './components/icons/Spotify';
-import YoutubeIcon from './components/icons/Youtube';
+//pages
+import HomePage from './pages/home';
+import MusicPage from './pages/music';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Box flexDirection="row">
-        <Text>TEST</Text>
-        <HomeIcon color="purple" />
-        <CameraIcon color="purple" />
-        <SpotifyIcon color="purple" />
-        <YoutubeIcon color="purple" />
-      </Box>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="HomePage">
+        <Stack.Screen
+          name="HomePage"
+          component={HomePage}
+          options={() => {
+            return {
+              headerShown: false,
+            };
+          }}
+        />
+        <Stack.Screen
+          name="MusicPage"
+          component={MusicPage}
+          options={() => {
+            return {
+              headerShown: false,
+              gestureEnabled: false, //geri gelmeyi engelliyor.
+            };
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
