@@ -1,5 +1,6 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
+import {useFocusEffect} from '@react-navigation/native';
 
 //components - styled-system
 import Box from '../components/styledSystem/box';
@@ -14,6 +15,13 @@ import YoutubeIcon from '../components/icons/Youtube';
 import theme from '../utils/theme';
 
 const MusicPage = ({navigation}) => {
+  useFocusEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    React.useCallback(() => {
+      StatusBar.setBarStyle(theme.colors.statusBar);
+    }),
+  );
+
   return (
     <Box flexDirection="row" as={SafeAreaView}>
       <Text onPress={() => navigation.navigate('HomePage')}>Music</Text>
