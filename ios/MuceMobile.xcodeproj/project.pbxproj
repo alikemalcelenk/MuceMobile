@@ -13,16 +13,16 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		156008713F31B3B0D94E4833 /* libPods-MuceMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA04CBA1E33C75A6DCE93BC5 /* libPods-MuceMobile-tvOS.a */; };
 		1720FD4BB44EAAF070284609 /* libPods-MuceMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F26D21E5A029BA9ABBFBBBF /* libPods-MuceMobile-tvOSTests.a */; };
+		28BBB271ABEE4F068A55535E /* SFProDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MuceMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MuceMobileTests.m */; };
+		79B9E84CA40945768389D82A /* SFProRounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A27ABE7A1A9918E67358CC7B /* libPods-MuceMobile-MuceMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5C19D018E9D8AA77E4FC78 /* libPods-MuceMobile-MuceMobileTests.a */; };
-		EA7EBA92277D872118FA89EA /* libPods-MuceMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FF350D72C1E2F9FACDE41 /* libPods-MuceMobile.a */; };
 		CBD3C0360E234378989E366E /* SFProDisplay-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37E51C027D4741778F274543 /* SFProDisplay-MediumItalic.otf */; };
-		28BBB271ABEE4F068A55535E /* SFProDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */; };
-		79B9E84CA40945768389D82A /* SFProRounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */; };
+		EA7EBA92277D872118FA89EA /* libPods-MuceMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 454FF350D72C1E2F9FACDE41 /* libPods-MuceMobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +59,12 @@
 		2D02E47B1E0B4A5D006451C7 /* MuceMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MuceMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MuceMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MuceMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3266BC8D4AF464F266F0A127 /* Pods-MuceMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile.release.xcconfig"; path = "Target Support Files/Pods-MuceMobile/Pods-MuceMobile.release.xcconfig"; sourceTree = "<group>"; };
+		37E51C027D4741778F274543 /* SFProDisplay-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-MediumItalic.otf"; path = "../assets/fonts/SFProDisplay-MediumItalic.otf"; sourceTree = "<group>"; };
 		40D32A5CC56DEC84B72AF465 /* Pods-MuceMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MuceMobile-tvOS/Pods-MuceMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		454FF350D72C1E2F9FACDE41 /* libPods-MuceMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuceMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568449D8DC646C687D426C90 /* Pods-MuceMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile.debug.xcconfig"; path = "Target Support Files/Pods-MuceMobile/Pods-MuceMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Semibold.otf"; path = "../assets/fonts/SFProDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProRounded-Semibold.otf"; path = "../assets/fonts/SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MuceMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		877EA161CA0132A0A2D1A83F /* Pods-MuceMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MuceMobile-tvOSTests/Pods-MuceMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1AB579C4937FB56D5236256 /* Pods-MuceMobile-MuceMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile-MuceMobileTests.release.xcconfig"; path = "Target Support Files/Pods-MuceMobile-MuceMobileTests/Pods-MuceMobile-MuceMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,9 +73,6 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FA04CBA1E33C75A6DCE93BC5 /* libPods-MuceMobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuceMobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37E51C027D4741778F274543 /* SFProDisplay-MediumItalic.otf */ = {isa = PBXFileReference; name = "SFProDisplay-MediumItalic.otf"; path = "../assets/fonts/SFProDisplay-MediumItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */ = {isa = PBXFileReference; name = "SFProDisplay-Semibold.otf"; path = "../assets/fonts/SFProDisplay-Semibold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; name = "SFProRounded-Semibold.otf"; path = "../assets/fonts/SFProRounded-Semibold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +155,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6A338E36AE7042F4914E9AAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37E51C027D4741778F274543 /* SFProDisplay-MediumItalic.otf */,
+				61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */,
+				6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		7435436FE5C216FF28B886E2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,17 +215,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		6A338E36AE7042F4914E9AAA /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				37E51C027D4741778F274543 /* SFProDisplay-MediumItalic.otf */,
-				61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */,
-				6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -465,11 +465,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MuceMobile-MuceMobileTests/Pods-MuceMobile-MuceMobileTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -523,11 +527,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MuceMobile/Pods-MuceMobile-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -15,4 +15,9 @@ const Text = styled(T)(
   compose(color, size, space, flexbox, border, layout, typography),
 );
 
+Text.defaultProps = {
+  fontFamily: 'SFProRounded-Semibold',
+  fontSize: 14,
+};
+
 export default Text;
