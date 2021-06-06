@@ -13,31 +13,43 @@ import GalleryIcon from '../../Icons/Gallery';
 //theme
 import theme from '../../../utils/theme';
 
-const HomeContent = ({navigation}) => {
+const HomePageContent = ({navigation}) => {
   const [realPhoto, setRealPhoto] = React.useState([]);
   const [showPhoto, setShowPhoto] = React.useState({});
+  const imgData = new FormData();
+
+  React.useEffect(() => {
+    //async await kullanmak için func ekledim
+    async function navigateSendImgPage() {
+      if (realPhoto._parts && showPhoto.uri) {
+        await navigation.navigate('SendImagePage', {realPhoto, showPhoto});
+        //sıfırlama sebebim 2. sayfadan geri dönerse yeni foto seçerse yukardaki ifi kırmasını engellemek
+        setRealPhoto([]);
+        setShowPhoto({});
+      }
+    }
+    navigateSendImgPage();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showPhoto, realPhoto]);
 
   const chooseFromGallery = () => {
     ImagePicker.openPicker({
       includeBase64: true,
       includeExif: true,
       mediaType: 'photo',
-    }).then((image) => {
-      const data = new FormData();
-      data.append('photo', {
+    }).then(async (image) => {
+      await imgData.append('photo', {
         uri: image.path,
         type: 'image/jpeg',
         name: Math.floor(Math.random() * 1000000) + '.jpg',
       });
-      setRealPhoto(data);
-      setShowPhoto({
+      await setRealPhoto(imgData);
+      await setShowPhoto({
         uri: image.path,
         width: image.width,
         height: image.height,
         mime: image.mime,
       });
-      console.log(showPhoto);
-      console.log(realPhoto);
     });
   };
 
@@ -47,21 +59,18 @@ const HomeContent = ({navigation}) => {
       includeExif: true,
       mediaType: 'photo',
     }).then((image) => {
-      const data = new FormData();
-      data.append('photo', {
+      imgData.append('photo', {
         uri: image.path,
         type: 'image/jpeg',
         name: Math.floor(Math.random() * 1000000) + '.jpg',
       });
-      setRealPhoto(data);
+      setRealPhoto(imgData);
       setShowPhoto({
         uri: image.path,
         width: image.width,
         height: image.height,
         mime: image.mime,
       });
-      console.log(showPhoto);
-      console.log(realPhoto);
     });
   };
 
@@ -103,4 +112,4 @@ const HomeContent = ({navigation}) => {
   );
 };
 
-export default HomeContent;
+export default HomePageContent;

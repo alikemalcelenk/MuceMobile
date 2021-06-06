@@ -12,6 +12,7 @@ import theme from './utils/theme';
 
 //pages
 import HomePage from './pages/home';
+import SendImagePage from './pages/sendImage';
 import MusicPage from './pages/music';
 
 const App = () => {
@@ -22,6 +23,16 @@ const App = () => {
           <Stack.Screen
             name="HomePage"
             component={HomePage}
+            options={() => {
+              return {
+                headerShown: false,
+                gestureEnabled: false, //geri gelmeyi engelliyor.
+              };
+            }}
+          />
+          <Stack.Screen
+            name="SendImagePage"
+            component={SendImagePage}
             options={() => {
               return {
                 headerShown: false,
