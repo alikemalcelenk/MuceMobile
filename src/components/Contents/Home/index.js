@@ -1,4 +1,5 @@
 import React from 'react';
+import ImagePicker from 'react-native-image-crop-picker';
 
 //components - styled-system
 import Box from '../../StyledSystem/box';
@@ -13,6 +14,57 @@ import GalleryIcon from '../../Icons/Gallery';
 import theme from '../../../utils/theme';
 
 const HomeContent = ({navigation}) => {
+  const [realPhoto, setRealPhoto] = React.useState([]);
+  const [showPhoto, setShowPhoto] = React.useState({});
+
+  const chooseFromGallery = () => {
+    ImagePicker.openPicker({
+      includeBase64: true,
+      includeExif: true,
+      mediaType: 'photo',
+    }).then((image) => {
+      const data = new FormData();
+      data.append('photo', {
+        uri: image.path,
+        type: 'image/jpeg',
+        name: Math.floor(Math.random() * 1000000) + '.jpg',
+      });
+      setRealPhoto(data);
+      setShowPhoto({
+        uri: image.path,
+        width: image.width,
+        height: image.height,
+        mime: image.mime,
+      });
+      console.log(showPhoto);
+      console.log(realPhoto);
+    });
+  };
+
+  const takePhoto = () => {
+    ImagePicker.openCamera({
+      includeBase64: true,
+      includeExif: true,
+      mediaType: 'photo',
+    }).then((image) => {
+      const data = new FormData();
+      data.append('photo', {
+        uri: image.path,
+        type: 'image/jpeg',
+        name: Math.floor(Math.random() * 1000000) + '.jpg',
+      });
+      setRealPhoto(data);
+      setShowPhoto({
+        uri: image.path,
+        width: image.width,
+        height: image.height,
+        mime: image.mime,
+      });
+      console.log(showPhoto);
+      console.log(realPhoto);
+    });
+  };
+
   return (
     <Box
       flexGrow={1}
@@ -25,7 +77,8 @@ const HomeContent = ({navigation}) => {
         borderColor="purple"
         flex={1}
         width={'100%'}
-        borderRadius={14}>
+        borderRadius={14}
+        onPress={() => takePhoto()}>
         <CameraIcon color={theme.colors.text} />
         <Text mt={25} fontSize={12}>
           Take a photo
@@ -39,7 +92,8 @@ const HomeContent = ({navigation}) => {
         borderColor="purple"
         flex={1}
         width={'100%'}
-        borderRadius={14}>
+        borderRadius={14}
+        onPress={() => chooseFromGallery()}>
         <GalleryIcon color={theme.colors.text} />
         <Text mt={25} fontSize={12}>
           Choose from gallery

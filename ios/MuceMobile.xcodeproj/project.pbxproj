@@ -59,12 +59,12 @@
 		2D02E47B1E0B4A5D006451C7 /* MuceMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MuceMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MuceMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MuceMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3266BC8D4AF464F266F0A127 /* Pods-MuceMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile.release.xcconfig"; path = "Target Support Files/Pods-MuceMobile/Pods-MuceMobile.release.xcconfig"; sourceTree = "<group>"; };
-		37E51C027D4741778F274543 /* SFProDisplay-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-MediumItalic.otf"; path = "../assets/fonts/SFProDisplay-MediumItalic.otf"; sourceTree = "<group>"; };
+		37E51C027D4741778F274543 /* SFProDisplay-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-MediumItalic.otf"; path = "../assets/fonts/SFProDisplay-MediumItalic.otf"; sourceTree = "<group>"; };
 		40D32A5CC56DEC84B72AF465 /* Pods-MuceMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MuceMobile-tvOS/Pods-MuceMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		454FF350D72C1E2F9FACDE41 /* libPods-MuceMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuceMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568449D8DC646C687D426C90 /* Pods-MuceMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile.debug.xcconfig"; path = "Target Support Files/Pods-MuceMobile/Pods-MuceMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Semibold.otf"; path = "../assets/fonts/SFProDisplay-Semibold.otf"; sourceTree = "<group>"; };
-		6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProRounded-Semibold.otf"; path = "../assets/fonts/SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
+		61C64CC6968F4A349AEF0B87 /* SFProDisplay-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Semibold.otf"; path = "../assets/fonts/SFProDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProRounded-Semibold.otf"; path = "../assets/fonts/SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MuceMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		877EA161CA0132A0A2D1A83F /* Pods-MuceMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MuceMobile-tvOSTests/Pods-MuceMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1AB579C4937FB56D5236256 /* Pods-MuceMobile-MuceMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuceMobile-MuceMobileTests.release.xcconfig"; path = "Target Support Files/Pods-MuceMobile-MuceMobileTests/Pods-MuceMobile-MuceMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +163,6 @@
 				6B9C2BAA616E4C73A3524874 /* SFProRounded-Semibold.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		7435436FE5C216FF28B886E2 /* Pods */ = {
@@ -178,7 +177,6 @@
 				877EA161CA0132A0A2D1A83F /* Pods-MuceMobile-tvOSTests.debug.xcconfig */,
 				EAE39754009E4DD0F34C9623 /* Pods-MuceMobile-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -314,6 +312,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = J956AVC72B;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -723,6 +722,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J956AVC72B;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MuceMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -746,6 +746,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J956AVC72B;
 				INFOPLIST_FILE = MuceMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
