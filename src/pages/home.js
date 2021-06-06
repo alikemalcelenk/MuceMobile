@@ -22,7 +22,21 @@ const HomePage = ({navigation}) => {
 
   return (
     <Box flexDirection="row" as={SafeAreaView}>
-      <Text onPress={() => navigation.navigate('MusicPage')}>Home</Text>
+      <Text
+        onPress={() => navigation.navigate('MusicPage')}
+        fontFamily="SFProDisplay-Semibold">
+        Home{' '}
+      </Text>
+      <Text
+        onPress={() => navigation.navigate('MusicPage')}
+        fontFamily="SFProRounded-Semibold">
+        Home{' '}
+      </Text>
+      <Text
+        onPress={() => navigation.navigate('MusicPage')}
+        fontFamily="SFProDisplay-MediumItalic">
+        Home{' '}
+      </Text>
       <CameraIcon color={theme.colors.purple} />
     </Box>
   );
