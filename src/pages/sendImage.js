@@ -25,7 +25,6 @@ const SendImagePage = ({route, navigation}) => {
       <Header
         subTitle={'Send photo, I’ll suggest music according to your emotion'}
       />
-
       <Content route={route} navigation={navigation} />
     </Box>
   );

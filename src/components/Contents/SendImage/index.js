@@ -1,29 +1,46 @@
 import React from 'react';
-import ImagePicker from 'react-native-image-crop-picker';
+import {Dimensions, ScrollView} from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 //components - styled-system
 import Box from '../../StyledSystem/box';
+import Image from '../../StyledSystem/image';
 import Button from '../../StyledSystem/button';
-import Text from '../../StyledSystem/text';
 
 //components - icons
-import CameraIcon from '../../Icons/Camera';
-import GalleryIcon from '../../Icons/Gallery';
-
-//theme
-import theme from '../../../utils/theme';
+import ArrowIcon from '../../Icons/Arrow';
 
 const SendImagePageContent = ({route, navigation}) => {
   const [realPhoto, setRealPhoto] = React.useState(route.params.realPhoto);
   const [showPhoto, setShowPhoto] = React.useState(route.params.showPhoto);
 
-  React.useEffect(() => {
-    console.log(route);
-  });
+  const sendPhoto = () => {
+    console.log(realPhoto);
+  };
 
   return (
-    <Box flexGrow={1} alignItems="center" justifyContent="center">
-      <Text>sendImg</Text>
+    <Box as={ScrollView} flexGrow={1} my={15}>
+      <Box flexDirection="column" alignItems="center" my={15}>
+        <Image
+          source={showPhoto}
+          width={windowWidth - 90} // marginx = 45
+          height={((windowWidth - 90) * showPhoto.height) / showPhoto.width}
+          borderRadius={5}
+          border={2}
+          borderColor="purple"
+        />
+
+        <Button
+          height={45}
+          width={windowWidth - 90}
+          bg="purple"
+          mt={30}
+          borderRadius={5}
+          onPress={() => sendPhoto()}>
+          <ArrowIcon color="white" />
+        </Button>
+      </Box>
     </Box>
   );
 };
