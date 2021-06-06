@@ -10,7 +10,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "svgr": "svgr ./src/icons -d ./src/components/icons --native --svg-props 'className=' --svgo-config .svgorc.json"
+    "svgr": "svgr ./src/icons -d ./src/components/Icons --native --svg-props 'className=' --svgo-config .svgorc.json"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
