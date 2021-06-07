@@ -1,26 +1,22 @@
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 import {useFocusEffect} from '@react-navigation/native';
-import axios from 'axios';
-import {MaterialIndicator} from 'react-native-indicators';
 
 //components
 import Header from '../components/Header/index';
 import Content from '../components/Contents/Music/index';
+import TabBar from '../components/MusicPageTabBar/index';
+import Spinner from '../components/Spinner/index';
 
 //components - styled-system
 import Box from '../components/StyledSystem/box';
-import Button from '../components/StyledSystem/button';
 import Text from '../components/StyledSystem/text';
-
-//components - icons
-import HomeIcon from '../components/Icons/Home';
 
 //theme
 import theme from '../utils/theme';
 
-//config
-import env from '../config/environment';
+//api
+import {getMusic} from '../api/music';
 
 //store
 import {observer} from 'mobx-react';
@@ -42,16 +38,15 @@ const MusicPage = ({navigation}) => {
   );
 
   React.useEffect(() => {
-    proposeSong();
+    proposeMusic();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const proposeSong = () => {
+  const proposeMusic = async () => {
     setIsLoading(true);
     setIsErr(false);
-    const photo = Store.realPhoto;
-    axios
-      .post(env.API_BASE_URL + '/song/propose', photo)
+    const photo = await Store.realPhoto;
+    getMusic(photo)
       .then((response) => {
         if (response.data.song) {
           setMusic(response.data.song);
@@ -64,6 +59,16 @@ const MusicPage = ({navigation}) => {
         setIsLoading(false);
         setIsErr(true);
       });
+  };
+
+  const ErrMessage = () => {
+    return (
+      <Box alignItems="center" justifyContent="center" flex={1}>
+        <Text textAlign="center" mx={20}>
+          While processing the data, an error occurred. Please try again.
+        </Text>
+      </Box>
+    );
   };
 
   return (
@@ -79,25 +84,15 @@ const MusicPage = ({navigation}) => {
         emotion={!isLoading && !isErr && music.emotion}
       />
       {isLoading ? (
-        <Box alignItems="center" justifyContent="center" flex={1}>
-          <MaterialIndicator color={theme.colors.purple} size={50} />
-        </Box>
+        <Spinner color={theme.colors.purple} size={50} />
       ) : (
         <>
           {isErr ? (
-            <Box alignItems="center" justifyContent="center" flex={1}>
-              <Text textAlign="center" mx={20}>
-                While processing the data, an error occurred. Please try again.
-              </Text>
-            </Box>
+            <ErrMessage />
           ) : (
             <Content navigation={navigation} music={music} />
           )}
-          <Box mb={30} alignItems="center" justifyContent="flex-start">
-            <Button onPress={() => navigation.navigate('HomePage')}>
-              <HomeIcon color={theme.colors.text} />
-            </Button>
-          </Box>
+          <TabBar navigation={navigation} />
         </>
       )}
     </Box>
