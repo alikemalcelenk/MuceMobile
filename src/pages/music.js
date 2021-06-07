@@ -76,7 +76,7 @@ const MusicPage = ({navigation}) => {
       <Header
         subTitle={
           isLoading
-            ? 'Music is being loaded'
+            ? 'Music is loading'
             : isErr
             ? 'An error occurred'
             : 'Your emotion I predicted:'
