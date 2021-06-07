@@ -26,7 +26,7 @@ const SendImagePageContent = ({navigation}) => {
   };
 
   return (
-    <Box as={ScrollView} flexGrow={1} my={15}>
+    <Box as={ScrollView} flexGrow={1} mt={15}>
       <Box flexDirection="column" alignItems="center" my={15}>
         <Image
           source={showPhoto}

@@ -2,11 +2,7 @@ import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 import {useFocusEffect} from '@react-navigation/native';
 import axios from 'axios';
-import {
-  BallIndicator,
-  PulseIndicator,
-  MaterialIndicator,
-} from 'react-native-indicators';
+import {MaterialIndicator} from 'react-native-indicators';
 
 //components
 import Header from '../components/Header/index';
@@ -14,7 +10,11 @@ import Content from '../components/Contents/Music/index';
 
 //components - styled-system
 import Box from '../components/StyledSystem/box';
+import Button from '../components/StyledSystem/button';
 import Text from '../components/StyledSystem/text';
+
+//components - icons
+import HomeIcon from '../components/Icons/Home';
 
 //theme
 import theme from '../utils/theme';
@@ -53,7 +53,11 @@ const MusicPage = ({navigation}) => {
     axios
       .post(env.API_BASE_URL + '/song/propose', photo)
       .then((response) => {
-        setMusic(response.data);
+        if (response.data.song) {
+          setMusic(response.data.song);
+        } else {
+          setIsErr(true);
+        }
         setIsLoading(false);
       })
       .catch(() => {
@@ -72,7 +76,7 @@ const MusicPage = ({navigation}) => {
             ? 'An error occurred'
             : 'Your emotion I predicted:'
         }
-        emotion={!isLoading && !isErr && 'happy'}
+        emotion={!isLoading && !isErr && music.emotion}
       />
       {isLoading ? (
         <Box alignItems="center" justifyContent="center" flex={1}>
@@ -89,6 +93,11 @@ const MusicPage = ({navigation}) => {
           ) : (
             <Content navigation={navigation} music={music} />
           )}
+          <Box mb={30} alignItems="center" justifyContent="flex-start">
+            <Button onPress={() => navigation.navigate('HomePage')}>
+              <HomeIcon color={theme.colors.text} />
+            </Button>
+          </Box>
         </>
       )}
     </Box>
