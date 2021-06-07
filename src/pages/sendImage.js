@@ -12,7 +12,7 @@ import Box from '../components/StyledSystem/box';
 //theme
 import theme from '../utils/theme';
 
-const SendImagePage = ({route, navigation}) => {
+const SendImagePage = ({navigation}) => {
   useFocusEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     React.useCallback(() => {
@@ -25,7 +25,7 @@ const SendImagePage = ({route, navigation}) => {
       <Header
         subTitle={'Send photo, I’ll suggest music according to your emotion'}
       />
-      <Content route={route} navigation={navigation} />
+      <Content navigation={navigation} />
     </Box>
   );
 };

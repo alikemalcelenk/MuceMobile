@@ -11,12 +11,18 @@ import Button from '../../StyledSystem/button';
 //components - icons
 import ArrowIcon from '../../Icons/Arrow';
 
-const SendImagePageContent = ({route, navigation}) => {
-  const [realPhoto, setRealPhoto] = React.useState(route.params.realPhoto);
-  const [showPhoto, setShowPhoto] = React.useState(route.params.showPhoto);
+//store
+import {observer} from 'mobx-react';
+import {StoreContext} from '../../../store.js';
+
+const SendImagePageContent = ({navigation}) => {
+  //store
+  const Store = React.useContext(StoreContext);
+
+  const [showPhoto, setShowPhoto] = React.useState(Store.showPhoto);
 
   const sendPhoto = () => {
-    console.log(realPhoto);
+    navigation.navigate('MusicPage');
   };
 
   return (
@@ -27,7 +33,6 @@ const SendImagePageContent = ({route, navigation}) => {
           width={windowWidth - 90} // marginx = 45
           height={((windowWidth - 90) * showPhoto.height) / showPhoto.width}
           borderRadius={5}
-          border={2}
           borderColor="purple"
         />
 
@@ -45,4 +50,4 @@ const SendImagePageContent = ({route, navigation}) => {
   );
 };
 
-export default SendImagePageContent;
+export default observer(SendImagePageContent);

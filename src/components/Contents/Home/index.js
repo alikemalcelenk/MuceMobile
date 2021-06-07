@@ -13,7 +13,14 @@ import GalleryIcon from '../../Icons/Gallery';
 //theme
 import theme from '../../../utils/theme';
 
+//store
+import {observer} from 'mobx-react';
+import {StoreContext} from '../../../store.js';
+
 const HomePageContent = ({navigation}) => {
+  //store
+  const Store = React.useContext(StoreContext);
+
   const [realPhoto, setRealPhoto] = React.useState([]);
   const [showPhoto, setShowPhoto] = React.useState({});
   const imgData = new FormData();
@@ -22,7 +29,9 @@ const HomePageContent = ({navigation}) => {
     //async await kullanmak için func ekledim
     async function navigateSendImgPage() {
       if (realPhoto._parts && showPhoto.uri) {
-        await navigation.navigate('SendImagePage', {realPhoto, showPhoto});
+        await Store.changeRealPhoto(realPhoto);
+        await Store.changeShowPhoto(showPhoto);
+        await navigation.navigate('SendImagePage');
         //sıfırlama sebebim 2. sayfadan geri dönerse yeni foto seçerse yukardaki ifi kırmasını engellemek
         setRealPhoto([]);
         setShowPhoto({});
@@ -112,4 +121,4 @@ const HomePageContent = ({navigation}) => {
   );
 };
 
-export default HomePageContent;
+export default observer(HomePageContent);
